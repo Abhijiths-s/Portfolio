@@ -1,62 +1,20 @@
-.anime {
-    animation: appear 0.5s linear forwards; /* Duration and direction */
-}
 
-@keyframes appear {
-    from {
-        opacity: 0; /* Start invisible */
-        transform: translate3d(0, -100px, 0); /* Start 100px above */
-    }
-    to {
-        opacity: 1; /* End fully visible */
-        transform: translate3d(0, 0, 0); /* End at original position */
-    }
-}
 
 .anime2 {
-    animation: appear2 0.6s linear forwards; /* Duration and direction */
+    animation: appear2 0.6s linear forwards; 
 }
 
 @keyframes appear2 {
     from {
-        opacity: 0; /* Start invisible */
-        transform: translateY(100px); /* Start 100px below */
+        opacity: 0; 
+        transform: translateY(100px); 
     }
     to {
-        opacity: 1; /* End fully visible */
-        transform: translate3(0, 0, 0); /* End at original position */
+        opacity: 1; 
+        transform: translate3(0, 0, 0);
     }
 }
 
-.anime3 {
-    animation: appear3 0.5s linear forwards; /* Duration and direction */
-}
-
-@keyframes appear3 {
-    from {
-        opacity: 0; /* Start invisible */
-        transform: translateX(-100px); /* Start off-screen to the left */
-    }
-    to {
-        opacity: 1; /* End fully visible */
-        transform: translateX(0); /* End at original position */
-    }
-}
-
-.anime4 {
-    animation: appear4 0.5s linear forwards; /* Duration and direction */
-}
-
-@keyframes appear4 {
-    from {
-        opacity: 0; /* Start invisible */
-        transform: translateX(100px); /* Start off-screen to the right */
-    }
-    to {
-        opacity: 1; /* End fully visible */
-        transform: translateX(0); /* End at original position */
-    }
-}
 
 .progress-bar{
     animation: moving 1s linear forwards;
@@ -126,6 +84,4 @@
 
 
 
-/* <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
-</svg> */
+
