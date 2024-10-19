@@ -40,8 +40,17 @@ export default function Intro1(props) {
             -- Front end Developer | Designer --
           </h1>
         </div>
-        <button className={`w-36 h-12 ${props.mode === "light" ?"bg-orange-500":"bg-blue-500"} font-josefin-sans text-white text-lg z-10 absolute bottom-36 left-16 rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm hover:shadow-black font-bold flex  flex-col justify-center items-center px-8`}>
-          <a className="flex justify-between items-center gap-1">
+        <button
+          className={`w-36 h-12 ${
+            props.mode === "light" ? "bg-orange-500" : "bg-blue-500"
+          } font-josefin-sans text-white text-lg z-10 absolute bottom-36 left-16 rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm hover:shadow-black font-bold flex  flex-col justify-center items-center px-8`}
+        >
+          <a
+            className="flex justify-between items-center gap-1"
+            href="/RenderCV_sb2nov_Theme (4).pdf"
+            target="blank"
+            rel="noopener noreferer"
+          >
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
