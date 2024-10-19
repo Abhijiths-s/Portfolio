@@ -1,0 +1,18 @@
+.LineEffect::after{
+    content: " ";
+    margin-top:5px ;
+    
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgb(41, 104, 220);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+}
+
+.LineEffect:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
