@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -10,6 +10,20 @@ import Footer from "./components/Footer";
 
 function App() {
   const [mode, setMode] = useState("dark");
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
+
+
+  const toggleMode = () => {
+    const newMode = mode === 'light' ? 'dark' : 'light';
+    setMode(newMode);
+    localStorage.setItem('mode', newMode);
+  };
 
   const togglemode = () => {
     if (mode === "dark") {

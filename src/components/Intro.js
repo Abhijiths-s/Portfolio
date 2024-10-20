@@ -62,7 +62,7 @@ export default function Intro(props) {
       } w-100% flex flex-col items-center justify-center  backdrop-blur-md bg-cover bg-center font-roboto`}
     >
       <div
-        className={`rounded-full w-96 h-96 items-center justify-center shadow-md ${
+        className={`rounded-full w-80 h-80 md:w-96 md:h-96 items-center justify-center shadow-md ${
           props.mode === "light" ? "shadow-orange-600" : "shadow-blue-500"
         } bg-center bg-cover transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 my-16`}
         style={{ backgroundImage: `url(${profile2})` }}
@@ -72,25 +72,25 @@ export default function Intro(props) {
           props.mode === "dark" ? "text-gray-300" : "text-gray-800"
         } font-bold text-6xl mb-12 font-sans tracking-tight `}
       >
-        ABHIJITH S
+        Abhijith S
       </h1>
       <div
         className={`mx-12 my-4 rounded-3xl ${
-          props.mode === "light" ? "bg-[#ff9800]" : "bg-gray-800"
-        } transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 border-dashed shadow-md shadow- border-2 ${props.mode === "dark" ? "border-blue-500" : "border-red-600" 
+          props.mode === "light" ? "bg-gray-100" : "bg-gray-900"
+        } transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 border-dashed shadow-md  ${props.mode === "dark" ? "shadow-gray-400" : "border-red-600" 
       } `}
       >
         <p
           className={`${
-            props.mode === "light" ? "text-gray-200" : "text-gray-400"
-          } leading-relaxed mb-4 text-2xl p-10 text-center font-sans`}
+            props.mode === "light" ? "text-[#ff9800]" : "text-gray-400"
+          } leading-relaxed mb-4 text-xl md:text-2xl p-10 text-center font-sans font-bold`}
         >
           Hi, I’m Abhijith S. I'm a front-end developer passionate about
           building responsive and user-friendly web applications. With expertise
           in
-          <span className="font-semibold"> HTML, CSS, JavaScript, </span> and
+          <span className="font-extrabold"> HTML, CSS, JavaScript, </span> and
           programming languages like{" "}
-          <span className="font-semibold">Python and Java</span>, I focus on
+          <span className="font-extrabold">Python and Java</span>, I focus on
           creating intuitive designs that enhance user engagement.
         </p>
       </div>
@@ -111,7 +111,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref1}
-            className={`text-gray-300 leading-relaxed mb-4 text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-4 md:text-2xl p-10 text-center text-xl odd:hover:text-gray-100 ${
               visibleSections.section1 ? "anime2" : ""
             } font-sans`}
           >
@@ -137,7 +137,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref2}
-            className={`text-gray-300 leading-relaxed mb-4 text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-4 text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section2 ? "anime2" : ""
             }`}
           >
@@ -162,7 +162,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref3}
-            className={`text-gray-300 leading-relaxed mb-4 text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-4 text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section3 ? "anime2" : ""
             }`}
           >
@@ -189,7 +189,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref4}
-            className={`text-gray-300 leading-relaxed mb-4  text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-4  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section4 ? "anime2" : ""
             }`}
           >
