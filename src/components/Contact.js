@@ -49,7 +49,7 @@ export default function Contact(props) {
       } flex justify-center items-center border-none mt-10`}
     >
       <div
-        className={`lg:py-16  m-10 p-14 w-9/10 md:w-3/5  ${
+        className={`lg:py-16  m-10 p-14 w-9/10 md:w-3/5 h-screen  ${
           props.mode === "dark" ? "" : ""
         } ${props.mode === "dark" ? "bg-gray-900" : "bg-gray-100"} rounded-lg  ${props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
       } shadow-md border-none`}
