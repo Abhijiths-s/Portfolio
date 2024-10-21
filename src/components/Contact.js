@@ -46,13 +46,13 @@ export default function Contact(props) {
     <div
       className={`${
         props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"
-      } flex justify-center items-center`}
+      } flex justify-center items-center border-none`}
     >
       <div
         className={`lg:py-16  m-10 p-14 w-9/10 md:w-3/5  ${
           props.mode === "dark" ? "" : ""
         } ${props.mode === "dark" ? "bg-gray-900" : "bg-gray-100"} rounded-lg  ${props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
-      } shadow-md`}
+      } shadow-md border-none`}
       >
         <h2
           className={`mb-5 text-4xl tracking-tight font-extrabold text-center ${

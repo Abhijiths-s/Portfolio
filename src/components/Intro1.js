@@ -30,13 +30,13 @@ export default function Intro1(props) {
         ></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 font-josefin-sans">
-          <h1 className="text-gray-300 text-4xl my-2 mx-6 md:text-6xl text-left">
+          <h1 className="text-gray-300 sm:text-4xl text-2xl my-2 mx-6 md:text-6xl text-left">
             Hello,I am
           </h1>
-          <h1 className="text-gray-300 text-6xl m-6 md:text-8xl text-left">
+          <h1 className="text-gray-300  text-4xl sm:text-6xl m-6 md:text-8xl text-left">
             ABHIJITH S
           </h1>
-          <h1 className="text-gray-300 text-2xl my-2 mx-6 md:text-3xl text-left ">
+          <h1 className="text-gray-300 text-xl sm:text-2xl my-2 mx-6 md:text-3xl text-left ">
             -- Front end Developer | Designer --
           </h1>
         </div>

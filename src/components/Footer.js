@@ -4,8 +4,8 @@ export default function Footer(props) {
   return (
     
 
-<footer class={`${props.mode ==="dark" ?"bg-gray-900":"bg-gray-200"}`}>
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+<footer class={`${props.mode ==="dark" ?"bg-gray-900":"bg-gray-200 border-none"}`}>
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 border-none">
         
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="flex items-center justify-center">

@@ -59,7 +59,7 @@ export default function Intro(props) {
     <div
       className={`${
         props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"
-      } w-100% flex flex-col items-center justify-center  backdrop-blur-md bg-cover bg-center font-roboto`}
+      } w-100% flex flex-col items-center justify-center  backdrop-blur-md border-none bg-cover bg-center font-roboto`}
     >
       <div
         className={`rounded-full w-80 h-80 md:w-96 md:h-96 items-center justify-center shadow-md ${
@@ -75,7 +75,7 @@ export default function Intro(props) {
         Abhijith S
       </h1>
       <div
-        className={`mx-12 my-4 rounded-3xl ${
+        className={`md:mx-12 md:my-4 mx-8 rounded-3xl ${
           props.mode === "light" ? "bg-gray-100" : "bg-gray-900"
         } transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 border-dashed shadow-md  ${props.mode === "dark" ? "shadow-gray-400" : "border-red-600" 
       } `}
@@ -95,10 +95,10 @@ export default function Intro(props) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 justify-center m-16 mt-10 font-roboto">
+      <div className="grid md:grid-cols-2 justify-center md:m-16 m-8  font-roboto">
         {/* Section 1 */}
         <div
-          className={`relative my-8 md:m-8 p-1 before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
+          className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
             props.mode === "light" ? "bg-[#ff9800]" : "bg-gray-800"
           } ${
             props.mode === "light"
@@ -111,7 +111,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref1}
-            className={`text-gray-300 leading-relaxed mb-4 md:text-2xl p-10 text-center text-xl odd:hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-2 md:text-2xl p-10 text-center text-xl hover:text-gray-100 ${
               visibleSections.section1 ? "anime2" : ""
             } font-sans`}
           >
@@ -120,11 +120,11 @@ export default function Intro(props) {
             responsive, user-friendly designs, and I continue to learn and
             improve with each project.
           </p>
-        </div>
+      </div>
 
         {/* Section 2 */}
         <div
-          className={`relative my-8 md:m-8 p-1 before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
+          className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
             props.mode === "light" ? "bg-[#ff9800]" : "bg-gray-800"
           } ${
             props.mode === "light"
@@ -137,7 +137,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref2}
-            className={`text-gray-300 leading-relaxed mb-4 text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section2 ? "anime2" : ""
             }`}
           >
@@ -149,7 +149,7 @@ export default function Intro(props) {
 
         {/* Section 3 */}
         <div
-          className={`relative my-8 md:m-8 p-1 before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
+          className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
             props.mode === "light" ? "bg-[#ff9800]" : "bg-gray-800"
           } ${
             props.mode === "light"
@@ -162,7 +162,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref3}
-            className={`text-gray-300 leading-relaxed mb-4 text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section3 ? "anime2" : ""
             }`}
           >
@@ -174,7 +174,7 @@ export default function Intro(props) {
 
         {/* Section 4 */}
         <div
-          className={`relative my-8 md:m-8 p-1 before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
+          className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
             props.mode === "light" ? "bg-[#ff9800]" : "bg-gray-800"
           } ${
             props.mode === "light"
@@ -189,7 +189,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref4}
-            className={`text-gray-300 leading-relaxed mb-4  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed   text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section4 ? "anime2" : ""
             }`}
           >

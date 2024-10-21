@@ -58,7 +58,7 @@ export default function Skills(props) {
     <div
       className={`h-screen w-full  flex items-center justify-center ${
         props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"
-      } flex-col py-8 font-josefin-sans`}
+      } flex-col py-8 font-sans border-none`}
     >
       <h1 className={`font-sans font-extrabold tracking-tight ${props.mode ==="dark"?"text-white":"text-[#ff9800]"} text-6xl mb-10 text-center`}>
         Skills
@@ -66,7 +66,7 @@ export default function Skills(props) {
       <div
         className={`h-screen w-3/4 rounded-xl ${
           props.mode === "dark" ? "bg-gray-900" : "bg-gray-100"
-        } relative p-16 m-4  ${props.mode === "dark" ? "" : ""
+        } relative p-8 md:p-16 m-0  ${props.mode === "dark" ? "" : ""
       } ${props.mode === "dark" ? "shadow-gray-500" : "shadow-gray-300"
       } shadow-md flex flex-col justify-center` }
       >

@@ -21,7 +21,7 @@ export default function Header(props) {
           props.mode === "dark" ? "border-blue-500" : "border-orange-400"
         } border-b-2 sticky top-0 z-50`}
       >
-        <div className="container mx-auto flex justify-between items-center p-4  font-josefin-sans font-bold gap">
+        <div className="flex justify-between items-center p-3  font-josefin-sans font-bold gap">
           <div
             className={`md:hidden w-8 h-8 rounded-md flex items-center justify-center hover:${
               props.mode === "light" ? "" : "bg-slate-800"
@@ -74,7 +74,7 @@ export default function Header(props) {
               Contact
             </Link>
           </nav>
-          <div className="flex justify-between items-center w-64  px-5 md:w-96 ">
+          <div className="flex justify-between items-center w-64  px-2 md:w-80 ">
             <div>
               <a href="https://www.instagram.com/abh__ij__iths/"
               target="blank"
@@ -163,7 +163,7 @@ export default function Header(props) {
               </a>
             </div>
             <div
-              className={`w-10 h-10 flex justify-center items-center hover:bg-gray-800 rounded-xl md:ml-14 active:border-2 active:border-gray-700 ${
+              className={`w-10 h-10 flex justify-center items-center hover:bg-gray-800 rounded-xl md:ml-18 active:border-2 active:border-gray-700 ${
                 props.mode === "light" ? "bg-gray-800" : "bg-gray-700"
               }`}
             >
