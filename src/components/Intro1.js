@@ -39,12 +39,10 @@ export default function Intro1(props) {
           <h1 className="text-gray-300 text-xl sm:text-2xl my-2 mx-6 md:text-3xl text-left ">
             -- Front end Developer | Designer --
           </h1>
-        </div>
-        <div className="flex  flex-col justify-center items-center absolute left-10 bottom-36">
           <button
             className={`w-36 h-12 ${
               props.mode === "light" ? "bg-orange-500" : "bg-blue-500"
-            } font-josefin-sans text-white text-lg z-10  rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm flex  flex-col justify-center items-center hover:shadow-black font-bold  px-8`}
+            } font-josefin-sans text-white text-lg z-10  rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm flex  flex-col justify-center items-center hover:shadow-black font-bold  px-8 ml-5 mt-12`}
           >
             <a
               className="flex justify-between items-center gap-1"
@@ -71,6 +69,7 @@ export default function Intro1(props) {
             </a>
           </button>
         </div>
+       
       </div>
     </>
   );

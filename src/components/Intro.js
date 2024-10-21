@@ -111,7 +111,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref1}
-            className={`text-gray-300 leading-relaxed mb-2 md:text-2xl p-10 text-center text-xl hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed mb-2 md:text-2xl p-10 text-center text-lg hover:text-gray-100 ${
               visibleSections.section1 ? "anime2" : ""
             } font-sans`}
           >
@@ -137,7 +137,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref2}
-            className={`text-gray-300 leading-relaxed  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed  text-lg md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section2 ? "anime2" : ""
             }`}
           >
@@ -162,7 +162,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref3}
-            className={`text-gray-300 leading-relaxed  text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed  text-lg md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section3 ? "anime2" : ""
             }`}
           >
@@ -189,7 +189,7 @@ export default function Intro(props) {
           </h2>
           <p
             ref={ref4}
-            className={`text-gray-300 leading-relaxed   text-xl md:text-2xl p-10 text-center hover:text-gray-100 ${
+            className={`text-gray-300 leading-relaxed   text-lg md:text-2xl p-10 text-center hover:text-gray-100 ${
               visibleSections.section4 ? "anime2" : ""
             }`}
           >

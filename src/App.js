@@ -35,7 +35,9 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className={`${
+        mode === "dark" ? "bg-gray-900" : "bg-gray-200"
+      }`}>
         <Header mode={mode} toggle={togglemode}/>
 
         <Routes>

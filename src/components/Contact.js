@@ -46,7 +46,7 @@ export default function Contact(props) {
     <div
       className={`${
         props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"
-      } flex justify-center items-center border-none`}
+      } flex justify-center items-center border-none mt-10`}
     >
       <div
         className={`lg:py-16  m-10 p-14 w-9/10 md:w-3/5  ${
