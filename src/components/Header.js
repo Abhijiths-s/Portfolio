@@ -15,11 +15,17 @@ export default function Header(props) {
   return (
     <>
       <header
-        className={`${props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"} ${
+        className={`${props.mode === "dark" ? "bg-gray-900" : "bg-[#CDF5FD]"} ${
           props.mode === "dark" ? "text-white" : "text-gray-900"
         } ${
-          props.mode === "dark" ? "border-blue-500" : "border-orange-400"
-        } border-b-2 sticky top-0 z-50`}
+          props.mode === "dark" ? "shadow-blue-500" : "shadow-[#F9EAB1]"
+        }
+        ${
+          props.scroll>900 ? "bg-transparent" : ""
+        } 
+        ${
+          props.scroll>900 ? "shadow-none" : ""
+        }shadow-md sticky top-0 z-50 slide-in`}
       >
         <div className="flex justify-between items-center p-3  font-josefin-sans font-bold gap">
           <div
@@ -74,7 +80,7 @@ export default function Header(props) {
               Contact
             </Link>
           </nav>
-          <div className="flex justify-between items-center w-64  px-2 md:w-80 ">
+          <div className="flex justify-between items-center w-64   md:w-64 ">
             <div>
               <a href="https://www.instagram.com/abh__ij__iths/"
               target="blank"
@@ -195,12 +201,12 @@ export default function Header(props) {
             className={`${
               isOpen ? "block" : "hidden"
             } md:hidden container  absolute left-0 top-16 z-50 h-88 w-100% text-center ${
-              props.mode === "light" ? "bg-gray-300" : "bg-gray-900"
+              props.mode === "light" ? "bg-[#bfedf6]" : "bg-gray-900"
             } text-white shadow-md shadow-blue-500 font-josefin-sans font-bold`}
           >
             <div
               className={`rounded-xl ${
-                props.mode === "light" ? "bg-gray-200" : "bg-gray-900"
+                props.mode === "light" ? "bg-[#CDF5FD]" : "bg-gray-900"
               } ${
                 props.mode === "light" ? "text-gray-900" : "texy-gray-300"
               } m-6 p-4 border-2 z-50 border-gray-700 `}
@@ -210,7 +216,7 @@ export default function Header(props) {
                   to="#home"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-orange-500"
+                      ? "hover:bg-[#F9EAB1]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -220,7 +226,7 @@ export default function Header(props) {
                   to="#about"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-orange-500"
+                      ? "hover:bg-[#F9EAB1]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -230,7 +236,7 @@ export default function Header(props) {
                   to="#skills"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-orange-500"
+                      ? "hover:bg-[#F9EAB1]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -240,7 +246,7 @@ export default function Header(props) {
                   to="#contact"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-orange-500"
+                      ? "hover:bg-[#F9EAB1]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >

@@ -16,3 +16,23 @@
     transform-origin: left;
     transform: scaleX(1);
 }
+
+.slide-in{
+    animation: slide 1.5s ease-in-out;
+}
+
+@keyframes slide {
+    0%{
+        top: -100px;
+    }
+    60%{
+        top: 10px;
+    }
+    80%{
+        top: -8px;
+    }
+    100%{
+        top: 0px;
+    }
+    
+}

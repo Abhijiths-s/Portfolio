@@ -45,18 +45,18 @@ export default function Contact(props) {
   return (
     <div
       className={`${
-        props.mode === "dark" ? "bg-gray-900" : "bg-gray-200"
-      } flex justify-center items-center border-none mt-10`}
+        props.mode === "dark" ? "bg-gray-900" : "bg-[#CDF5FD]"
+      } flex justify-center items-center border-none outline-none `}
     >
       <div
-        className={`lg:py-16  m-10 p-14 w-9/10 md:w-3/5  ${
+        className={`lg:py-16  md:m-10 p-14 w-9/10 md:w-3/5  ${
           props.mode === "dark" ? "" : ""
-        } ${props.mode === "dark" ? "bg-gray-900" : "bg-gray-100"} rounded-lg  ${props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
-      } shadow-md border-none`}
+        } ${props.mode === "dark" ? "bg-gray-900" : "bg-[#F9EAB1]"} rounded-lg  md:${props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
+      } md:shadow-md border-none`}
       >
         <h2
           className={`mb-5 text-4xl tracking-tight font-extrabold text-center ${
-            props.mode === "dark" ? "text-white" : "text-[#ff9800]"
+            props.mode === "dark" ? "text-white" : "text-[#755139ff]"
           }`}
         >
           Contact Me
@@ -169,11 +169,14 @@ export default function Contact(props) {
           </div>
           <button
             type="submit"
-            className={`py-3 px-5 text-sm font-medium text-center text-white rounded-lg ${
-              props.mode === "dark" ? "bg-blue-500" : "bg-[#ff9800]"
+            className={`py-3 px-5 text-sm font-medium text-center  rounded-lg flex justify-center ${
+              props.mode === "dark" ? "bg-blue-500" : "bg-[#CDF5FD]"
             } sm:w-fit h-10 ${
-              props.mode === "dark" ? "hover:bg-blue-800" : "hover:bg-[#de8603]"
-            } focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+              props.mode === "dark" ? "hover:bg-blue-800" : "hover:bg-[#95c6d0]"
+            } 
+            ${
+              props.mode === "dark" ? "text-white" : "text-[#755139ff]"
+            }focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
           >
             Send message
           </button>

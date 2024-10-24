@@ -1,7 +1,6 @@
 import React from "react";
 import profile from "../images/profile.jpg";
-import profile21 from "../images/profile21.jpg";
-import profile22 from "../images/profile22.jpg";
+import profile3 from "../images/profile3.jpg"
 import "./Intro1.css";
 
 export default function Intro1(props) {
@@ -9,40 +8,43 @@ export default function Intro1(props) {
     <>
       <div className="relative h-screen w-full bg-transparent">
         <div
-          className="h-full w-full  sticky top-20 -z-50 md:hidden "
+          className="h-full w-full  sticky top-20 -z-40 md:hidden bg-transparent "
           style={{
             backgroundImage: `url(${profile})`,
             backgroundPosition: "center", // Centers the image vertically and horizontally
             backgroundSize: "cover", // Ensures the image covers the entire area
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
+            
           }}
         ></div>
         <div
-          className="h-full w-50%  sticky top- -z-50 hidden md:block"
+          className="h-full w-50%  sticky top- -z-40 hidden md:block bg-transparent"
           style={{
-            backgroundImage: `url(${profile22})`,
+            backgroundImage: `url(${profile3})`,
             backgroundPosition: "center", // Centers the image vertically and horizontally
             backgroundSize: "cover", // Ensures the image covers the entire area
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 font-josefin-sans">
-          <h1 className="text-gray-300 sm:text-4xl text-2xl my-2 mx-6 md:text-6xl text-left">
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 ">
+          <h1 className="text-gray-300 font-mode sm:text-4xl text-2xl my-2 mx-6 md:text-6xl text-left">
             Hello,I am
           </h1>
-          <h1 className="text-gray-300  text-4xl sm:text-6xl m-6 md:text-8xl text-left">
+          <h1 className="text-gray-300  text-4xl font-mode sm:text-6xl m-6 md:text-8xl text-left">
             ABHIJITH S
           </h1>
-          <h1 className="text-gray-300 text-xl sm:text-2xl my-2 mx-6 md:text-3xl text-left ">
+          <h1 className="text-gray-300 text-lg sm:text-2xl my-2 mx-6 md:text-3xl text-left ">
             -- Front end Developer | Designer --
           </h1>
           <button
             className={`w-36 h-12 ${
-              props.mode === "light" ? "bg-orange-500" : "bg-blue-500"
-            } font-josefin-sans text-white text-lg z-10  rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm flex  flex-col justify-center items-center hover:shadow-black font-bold  px-8 ml-5 mt-12`}
+              props.mode === "light" ? "bg-[#CDF5FD]" : "bg-blue-500"
+            } font-josefin-sans ${
+              props.mode === "light" ? "text-[#755139ff]" : "text-white"
+            } text-lg z-10  rounded-3xl transition hover:-translate-y-1 hover:scale-105 hover:shadow-sm flex  flex-col justify-center items-center hover:shadow-black font-bold  px-8 ml-5 mt-12`}
           >
             <a
               className="flex justify-between items-center gap-1"
@@ -51,7 +53,9 @@ export default function Intro1(props) {
               rel="noopener noreferer"
             >
               <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
+                class={`w-6 h-6 mb-1 ${
+              props.mode === "light" ? "text-[#755139ff]" : "text-white"
+            }`}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
