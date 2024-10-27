@@ -8,24 +8,20 @@ export default function Contact(props) {
     message: "",
   });
 
-  // State for response message from the server
   const [responseMessage, setResponseMessage] = useState("");
 
-  // Function to handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [name]: value,
-    });
+    }));
   };
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Send a POST request to the backend
-    fetch("http://localhost:5000/contact", {
+    fetch(`${process.env.REACT_APP_API_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,6 +31,15 @@ export default function Contact(props) {
       .then((response) => response.json())
       .then((data) => {
         setResponseMessage(data.message);
+        if (data.success) {
+          // Reset form fields if submission is successful
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -45,14 +50,17 @@ export default function Contact(props) {
   return (
     <div
       className={`${
-        props.mode === "dark" ? "bg-gray-900" : "bg-[#CDF5FD]"
-      } flex justify-center items-center border-none outline-none `}
+        props.mode === "dark" ? "bg-gray-900" : "bg-[#fff7f7]"
+      } flex justify-center items-center border-none outline-none`}
     >
       <div
-        className={`lg:py-16  md:m-10 p-14 w-9/10 md:w-3/5  ${
-          props.mode === "dark" ? "" : ""
-        } ${props.mode === "dark" ? "bg-gray-900" : "bg-[#F9EAB1]"} rounded-lg  md:${props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
-      } md:shadow-md border-none`}
+        className={`lg:py-16 md:m-10 p-14 w-9/10 md:w-3/5 ${
+          props.mode === "dark" ? "bg-gray-900" : "bg-[#fff7f7]"
+        } md:${
+          props.mode === "dark" ? "bg-gray-900" : "bg-white"
+        } rounded-lg md:${
+          props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
+        } md:shadow-md border-none`}
       >
         <h2
           className={`mb-5 text-4xl tracking-tight font-extrabold text-center ${
@@ -91,7 +99,7 @@ export default function Contact(props) {
                 props.mode === "dark" ? "bg-gray-700 " : "bg-white"
               } dark:border-gray-600 dark:placeholder-gray-400 ${
                 props.mode === "light" ? "text-gray-800" : "text-gray-400"
-              }  dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
+              } dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
               placeholder="Yourname@gmail.com"
               required
             />
@@ -115,7 +123,7 @@ export default function Contact(props) {
                 props.mode === "dark" ? "bg-gray-700 " : "bg-white"
               } dark:border-gray-600 dark:placeholder-gray-400 ${
                 props.mode === "light" ? "text-gray-800" : "text-gray-400"
-              }  dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
+              } dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
               placeholder="Enter Your Name..."
               required
             />
@@ -139,7 +147,7 @@ export default function Contact(props) {
                 props.mode === "dark" ? "bg-gray-700 " : "bg-white"
               } dark:border-gray-600 dark:placeholder-gray-400 ${
                 props.mode === "light" ? "text-gray-800" : "text-gray-400"
-              }  dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
+              } dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
               placeholder="Let me know how I can help you"
               required
             />
@@ -169,20 +177,19 @@ export default function Contact(props) {
           </div>
           <button
             type="submit"
-            className={`py-3 px-5 text-sm font-medium text-center  rounded-lg flex justify-center ${
+            className={`py-3 px-5 text-sm font-medium text-center rounded-lg flex justify-center ${
               props.mode === "dark" ? "bg-blue-500" : "bg-[#CDF5FD]"
             } sm:w-fit h-10 ${
               props.mode === "dark" ? "hover:bg-blue-800" : "hover:bg-[#95c6d0]"
-            } 
-            ${
+            } ${
               props.mode === "dark" ? "text-white" : "text-[#755139ff]"
-            }focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+            } focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
           >
             Send message
           </button>
         </form>
 
-        {responseMessage && <p className="text-green-500">{responseMessage}</p>}
+        
       </div>
     </div>
   );

@@ -19,11 +19,7 @@ function App() {
     }
   }, []);
 
-  const toggleMode = () => {
-    const newMode = mode === "light" ? "dark" : "light";
-    setMode(newMode);
-    localStorage.setItem("mode", newMode);
-  };
+
 
   const togglemode = () => {
     if (mode === "dark") {

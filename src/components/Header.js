@@ -21,7 +21,7 @@ export default function Header(props) {
           props.mode === "dark" ? "shadow-blue-500" : "shadow-[#F9EAB1]"
         }
         ${
-          props.scroll>900 ? "bg-transparent" : ""
+          props.scroll>900 ? "bg-transparent backdrop-blur-md" : ""
         } 
         ${
           props.scroll>900 ? "shadow-none" : ""
@@ -201,12 +201,12 @@ export default function Header(props) {
             className={`${
               isOpen ? "block" : "hidden"
             } md:hidden container  absolute left-0 top-16 z-50 h-88 w-100% text-center ${
-              props.mode === "light" ? "bg-[#bfedf6]" : "bg-gray-900"
+              props.mode === "light" ? "bg-[#fff7f7]" : "bg-gray-900"
             } text-white shadow-md shadow-blue-500 font-josefin-sans font-bold`}
           >
             <div
               className={`rounded-xl ${
-                props.mode === "light" ? "bg-[#CDF5FD]" : "bg-gray-900"
+                props.mode === "light" ? "bg-white" : "bg-gray-900"
               } ${
                 props.mode === "light" ? "text-gray-900" : "texy-gray-300"
               } m-6 p-4 border-2 z-50 border-gray-700 `}
@@ -216,7 +216,7 @@ export default function Header(props) {
                   to="#home"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-[#F9EAB1]"
+                      ? "hover:bg-[#755139ff]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -226,7 +226,7 @@ export default function Header(props) {
                   to="#about"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-[#F9EAB1]"
+                      ? "hover:bg-[#755139ff]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -236,7 +236,7 @@ export default function Header(props) {
                   to="#skills"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-[#F9EAB1]"
+                      ? "hover:bg-[#755139ff]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >
@@ -246,7 +246,7 @@ export default function Header(props) {
                   to="#contact"
                   className={`block px-3 py-2 text-2xl rounded-md ${
                     props.mode === "light"
-                      ? "hover:bg-[#F9EAB1]"
+                      ? "hover:bg-[#755139ff]"
                       : "hover:bg-blue-800"
                   } `} onClick={toggleMenu}
                 >

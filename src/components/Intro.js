@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import profile2 from "../images/profile2.jpg"; // Path to your image in the src folder
 import "./Intro1.css";
 
@@ -8,7 +8,7 @@ export default function Intro(props) {
   return (
     <div
       className={`${
-        props.mode === "dark" ? "bg-gray-900" : "bg-[#CDF5FD]"
+        props.mode === "dark" ? "bg-gray-900" : "bg-[#fff7f7]"
       } w-100% flex flex-col items-center justify-center  backdrop-blur-md border-none bg-cover bg-center font-roboto`}
     >
       <div
@@ -26,7 +26,7 @@ export default function Intro(props) {
       </h1>
       <div
         className={`md:mx-12 md:my-4 mx-8 rounded-3xl ${
-          props.mode === "light" ? "bg-[#F9EAB1]" : "bg-gray-900"
+          props.mode === "light" ? "bg-white" : "bg-gray-900"
         } transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 border-dashed shadow-md  ${props.mode === "dark" ? "shadow-gray-400" : "border-red-600" 
       } `}
       >

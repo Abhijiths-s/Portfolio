@@ -56,7 +56,7 @@ export default function About(props) {
   return (
     <div
       className={`${
-        props.mode === "dark" ? "bg-gray-900" : "bg-[#CDF5FD]"
+        props.mode === "dark" ? "bg-gray-900" : "bg-[#fff7f7]"
       } w-100% flex flex-col items-center justify-center  font-roboto outline-none`}
     >
       <h1
@@ -70,10 +70,10 @@ export default function About(props) {
         {/* Section 1 */}
         <div
           className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
-            props.mode === "light" ? "bg-[#755139ff]" : "bg-gray-800"
+            props.mode === "light" ? "bg-[#d3814a]" : "bg-gray-800"
           } ${
             props.mode === "light"
-              ? "before:bg-gradient-to-tr from-orange-600 to-yellow-400"
+              ? "before:bg-gradient-to-br from-[#795548] to-[#d4956b]"
               : "before:bg-gradient-to-tr from-blue-500 to-black"
           }`}
         >
@@ -96,10 +96,10 @@ export default function About(props) {
         {/* Section 2 */}
         <div
         className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
-          props.mode === "light" ? "bg-[#755139ff]" : "bg-gray-800"
+          props.mode === "light" ? "bg-[#d3814a]" : "bg-gray-800"
         } ${
           props.mode === "light"
-            ? "before:bg-gradient-to-tr from-orange-600 to-yellow-400"
+            ? "before:bg-gradient-to-br from-[#795548] to-[#d4956b]"
             : "before:bg-gradient-to-tr from-blue-500 to-black"
         }`}
       >
@@ -121,10 +121,10 @@ export default function About(props) {
       
       <div
         className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
-          props.mode === "light" ? "bg-[#755139ff]" : "bg-gray-800"
+          props.mode === "light" ? "bg-[#d3814a]" : "bg-gray-800"
         } ${
           props.mode === "light"
-            ? "before:bg-gradient-to-tr from-orange-600 to-yellow-400"
+            ? "before:bg-gradient-to-br from-[#795548] to-[#d4956b]"
             : "before:bg-gradient-to-tr from-blue-500 to-black"
         }`}
       >
@@ -146,10 +146,10 @@ export default function About(props) {
       
       <div
         className={`relative my-8 md:m-8  before:absolute before:-inset-1 before:rounded-3xl  before:-z-10 before:m+[2px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 rounded-3xl ${
-          props.mode === "light" ? "bg-[#755139ff]" : "bg-gray-800"
+          props.mode === "light" ? "bg-[#d3814a]" : "bg-gray-800"
         } ${
           props.mode === "light"
-            ? "before:bg-gradient-to-tr from-orange-600 to-yellow-400"
+            ? "before:bg-gradient-to-br from-[#795548] to-[#d4956b]"
             : "before:bg-gradient-to-tr from-blue-500 to-black"
         }`}
       >
