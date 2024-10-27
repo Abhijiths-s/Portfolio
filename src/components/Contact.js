@@ -56,8 +56,8 @@ export default function Contact(props) {
       <div
         className={`lg:py-16 md:m-10 p-14 w-9/10 md:w-3/5 ${
           props.mode === "dark" ? "bg-gray-900" : "bg-[#fff7f7]"
-        } md:${
-          props.mode === "dark" ? "bg-gray-900" : "bg-white"
+        } ${
+          props.mode === "dark" ? "md:bg-gray-900" : "md:bg-white"
         } rounded-lg md:${
           props.mode === "dark" ? " shadow-gray-500" : "shadow-gray-300"
         } md:shadow-md border-none`}
