@@ -187,6 +187,7 @@ export default function Contact(props) {
           >
             Send message
           </button>
+          {responseMessage&& <p className="text-green-400">{responseMessage}</p>}
         </form>
 
         
