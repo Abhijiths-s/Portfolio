@@ -19,16 +19,21 @@ export default function Contact(props) {
   };
 
   const handleSubmit = (e) => {
+    console.log(process.env.REACT_APP_API_URL);
+
     e.preventDefault();
 
-    fetch(`${process.env.REACT_APP_API_URL}/contact`, {
+    fetch(`http://localhost:5000/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        console.log("Response URL:", response.url); // Log the URL
+        return response.json();
+      })
       .then((data) => {
         setResponseMessage(data.message);
         if (data.success) {
@@ -187,10 +192,10 @@ export default function Contact(props) {
           >
             Send message
           </button>
-          {responseMessage&& <p className="text-green-400">{responseMessage}</p>}
+          {responseMessage && (
+            <p className="text-green-400">{responseMessage}</p>
+          )}
         </form>
-
-        
       </div>
     </div>
   );
