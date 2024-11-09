@@ -22,8 +22,9 @@ export default function Contact(props) {
     console.log(process.env.REACT_APP_API_URL);
 
     e.preventDefault();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
-    fetch(`http://localhost:5000/api/contact`, {
+    fetch(`${apiUrl}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
